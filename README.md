@@ -9,7 +9,7 @@
 ```text
 agent-toolkit/
 ├── skills/       # 可复用的 Agent 技能
-├── rules/        # 通用开发规范（规划中）
+├── rules/        # 通用开发规范
 ├── workflows/    # 开发工作流（规划中）
 ├── .claude/      # 本仓库自身接入技能的软链（以 Claude Code 为例）
 └── README.md
