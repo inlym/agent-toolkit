@@ -1,6 +1,7 @@
 ---
 name: good-commit
 description: 自动化 Git 代码提交流程。分析工作区改动，生成符合 Conventional Commit 规范的中文提交消息，将所有修改合并为单次提交并推送到远程仓库，不限定编程语言与技术栈。当用户表达"提交代码"、"commit 代码"、"提交修改"、"推送代码"、"git commit"等提交意图时使用。
+allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git add:*), Bash(git commit:*), Bash(git push:*), Bash(git pull:*)
 ---
 
 # Git Commit Skill

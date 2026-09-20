@@ -9,8 +9,9 @@
 ```text
 agent-toolkit/
 ├── skills/       # 可复用的 Agent 技能
-├── rules/        # 通用开发规范
-├── workflows/    # 开发工作流
+├── rules/        # 通用开发规范（规划中）
+├── workflows/    # 开发工作流（规划中）
+├── .claude/      # 本仓库自身接入技能的软链（以 Claude Code 为例）
 └── README.md
 ```
 
@@ -21,18 +22,26 @@ agent-toolkit/
 ### Claude Code
 
 ```bash
-ln -s ~/Projects/agent-toolkit/skills/good-commit \
+ln -s ~/projects/agent-toolkit/skills/good-commit \
   .claude/skills/good-commit
 ```
 
 ### Codex
 
 ```bash
-ln -s ~/Projects/agent-toolkit/skills/good-commit \
+ln -s ~/projects/agent-toolkit/skills/good-commit \
   .agents/skills/good-commit
 ```
 
 根据本地仓库路径及各 Agent 的目录约定调整软链接目标。
+
+### 仓库自用接入（以 Claude Code 为例）
+
+本仓库通过相对路径软链将自身技能接入 `.claude/skills/`，克隆到任意路径均有效：
+
+```bash
+ln -s ../../skills/good-commit .claude/skills/good-commit
+```
 
 ## 设计原则
 
